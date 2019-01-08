@@ -2304,7 +2304,6 @@ onStop <- function(fun, session = getDefaultReactiveDomain()) {
 # a Shiny Server parent process. The duration it's trying to record is the time
 # between a websocket message being received, and the next flush to the client.
 ShinyServerTimingRecorder <- R6Class("ShinyServerTimingRecorder",
-  cloneable = FALSE,
   public = list(
     initialize = function() {
       private$shiny_stdout <- if (exists(".shiny__stdout", globalenv()))
